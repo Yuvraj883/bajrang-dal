@@ -15,7 +15,7 @@ export default function ImageGallery() {
         <ImageListItem
           key={item.id}
           onClick={() => handleClick(item.id)}
-          className={selectedItem === item.id ? 'z-10  transform scale-150 transition-transform duration-300' : ''}
+          className={selectedItem === item.id ? 'z-10  transform -scale-150 transition-transform duration-300' : ''}
         >
           <img
             srcSet={`${item.img}?w=248&fit=crop&auto=format&dpr=2 2x`}

@@ -41,7 +41,7 @@ const SignIn = () => {
     <Container component="main" maxWidth="xs">
       <CssBaseline />
       <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-        <Avatar style={{ margin: '8px', backgroundColor: '#1976d2' }}>
+        <Avatar  style={{ margin: '8px', backgroundColor: '#db2777' }}>
           <LockOutlinedIcon />
         </Avatar>
         <Typography component="h1" variant="h5">
@@ -74,11 +74,12 @@ const SignIn = () => {
             value={password}
             onChange={(e) => setPassword(e.target.value)}
           />
-          <FormControlLabel
+          {/* <FormControlLabel
             control={<Checkbox value="remember" color="primary" />}
             label="Remember me"
-          />
+          /> */}
           <Button
+          sx={{background:'#db2777'}}
             type="submit"
             fullWidth
             variant="contained"
@@ -87,7 +88,7 @@ const SignIn = () => {
           >
             Sign In
           </Button>
-          <Grid container>
+          {/* <Grid container>
             <Grid item xs>
               <Link href="#" variant="body2">
                 Forgot password?
@@ -98,7 +99,7 @@ const SignIn = () => {
                 {"Don't have an account? Sign Up"}
               </Link>
             </Grid>
-          </Grid>
+          </Grid> */}
           {error && (
             <Typography variant="body2" color="error" style={{ marginTop: '16px' }}>
               {error}
@@ -108,9 +109,9 @@ const SignIn = () => {
       </div>
       <Box mt={8}>
         <Typography variant="body2" color="textSecondary" align="center">
-          {'Powered by '}
-          <Link color="inherit" href="https://mui.com/">
-            Material-UI
+          {'Created by '}
+          <Link color="inherit" href="https://developer-yuvraj.netlify.app/">
+            The God
           </Link>
         </Typography>
       </Box>
