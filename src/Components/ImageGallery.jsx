@@ -36,6 +36,11 @@ const itemData = [
     img:'../../image14.png',
     title:'meme'
   },
+  {
+    id: 21,
+    img: '../../image21.jpeg',
+    title: 'Sink',
+  },
   // {
   //   id: 1,
   //   img: '../../image1.png',
@@ -55,10 +60,6 @@ const itemData = [
     id: 16,
     img: '../../image16.jpeg',
     title: 'Sink',
-  },  {
-    id: 17,
-    img: '../../image17.jpeg',
-    title: 'Sink',
   },
   //  {
   //   id: 18,
@@ -72,11 +73,8 @@ const itemData = [
     img: '../../image3.png',
     title: 'Sink',
   },
-  {
-    id: 13,
-    img: '../../image13.png',
-    title: 'Sink',
-  },
+
+
   {
     id: 4,
     img: '../../image4.png',
@@ -98,17 +96,13 @@ const itemData = [
     img: '../../image6.png',
     title: 'Sink',
   },
-  // {
-  //   id: 19,
-  //   img: '../../image19.jpeg',
-  //   title: 'Sink',
-  // },
+  {
+    id: 20,
+    img: '../../image20.jpeg',
+    title: 'Sink',
+  },
 
-  // {
-  //   id: 7,
-  //   img: '../../image7.png',
-  //   title: 'Sink',
-  // },
+
 
   {
     id: 11,
@@ -122,6 +116,12 @@ const itemData = [
     title: 'Sink',
   },
   {
+    id: 17,
+    img: '../../image17.jpeg',
+    title: 'Sink',
+  },
+
+  {
     id: 9,
     img: '../../image9.png',
     title: 'Sink',
@@ -132,10 +132,16 @@ const itemData = [
     img: '../../image10.png',
     title: 'Sink',
   },
+
   {
     id: 12,
     img: '../../image12.png',
     title: 'Sink',
+  },
+  {
+    id: 13,
+    img: '../../image13.png',
+    title: 'meme',
   },
 
 
