@@ -1,13 +1,14 @@
 import React from 'react';
 import { Container, Typography, Button } from '@mui/material';
-import { useHistory } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
-const UnauthorizedPage = () => {
-  const history = useHistory();
+const Unauthorized = () => {
+  // const history = useHistory();
+  const navigate = useNavigate();
 
-  const handleSignIn = () => {
-    history.push('/signin'); // Replace '/signin' with your sign-in route
-  };
+  const handleSignIn = ()=>{
+    navigate('/sign-in'); 
+  }
 
   return (
     <Container maxWidth="sm" sx={{ textAlign: 'center', mt: 8 }}>
@@ -24,4 +25,4 @@ const UnauthorizedPage = () => {
   );
 };
 
-export default UnauthorizedPage;
+export default Unauthorized;

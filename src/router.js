@@ -17,12 +17,16 @@ const router = createBrowserRouter([
 
             },
             {
+              path:'/sign-in',
+              element:<SignIn/>
+            },
+            {
                 path:'gallery',
                 element:<Gallery/>,
             }
         ]
 
     },
-    
+
 ]);
 export default router;
