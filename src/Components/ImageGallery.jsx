@@ -32,10 +32,15 @@ export default function ImageGallery() {
 
 const itemData = [
   {
-    id: 1,
-    img: '../../image1.png',
-    title: 'Sink',
+    id:14,
+    img:'../../image14.png',
+    title:'meme'
   },
+  // {
+  //   id: 1,
+  //   img: '../../image1.png',
+  //   title: 'Sink',
+  // },
   {
     id: 2,
     img: '../../image2.png',
@@ -93,6 +98,7 @@ const itemData = [
     img: '../../image12.png',
     title: 'Sink',
   },
+
 
 
 ];
