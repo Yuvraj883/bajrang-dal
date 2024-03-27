@@ -1,12 +1,12 @@
-import { Button } from "@mui/material";
-
+import { Button } from '@mui/material'
+import Header from './Components/Header'
 
 function App() {
   return (
     <>
-      <Button>Let's go</Button>
+      <Header />
     </>
-  );
+  )
 }
 
-export default App;
+export default App
