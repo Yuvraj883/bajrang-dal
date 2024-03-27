@@ -36,12 +36,12 @@ function Header() {
   };
 
   return (
-    <AppBar position="static">
+    <AppBar sx={{ backgroundColor: '#ff69b4' }} position="static">
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
           <Typography
-            variant="h6"
+            variant="h5"
             noWrap
             component="a"
             href="#app-bar-with-responsive-menu"
@@ -51,7 +51,7 @@ function Header() {
               fontFamily: 'monospace',
               fontWeight: 700,
               letterSpacing: '.1rem',
-              color: 'pink',
+              color: '#fbcfe8',
               textDecoration: 'none',
             }}
           >
