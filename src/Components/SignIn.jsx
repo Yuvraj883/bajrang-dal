@@ -1,3 +1,4 @@
+import { useNavigate } from 'react-router-dom';
 import React, { useState } from 'react';
 import {
   Avatar,
@@ -15,17 +16,21 @@ import {
 import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 
 const SignIn = () => {
+  const navigate = useNavigate();
+  // const [signedIn, setSignedIn] = useState(false);
+  localStorage.setItem('signedIn', false);
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
 
   const handleSignIn = (e) => {
+
     e.preventDefault();
-    // Perform sign-in logic here
     if (password === 'godYuvi883' && email === 'im.thegod883@gmail.com') {
       // Redirect to the main page
-      console.log('Signing in with:', email, password);
-      window.location.href = '/main-page';
+      // console.log('Signing in with:', email, password);
+      localStorage.setItem('SignedIn', true);
+      navigate('/gallery');
     } else {
       // Show error message
       setError('Invalid credentials. Please try again.');
