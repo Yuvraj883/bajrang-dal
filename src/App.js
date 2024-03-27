@@ -1,12 +1,15 @@
 import {  } from '@mui/material'
-import Header from './Components/Header'
-import Cards from './Components/Card'
+
+import SignIn from './Components/SignIn'
+import Gallery from './Pages/Gallery'
 
 function App() {
   return (
     <>
-      <Header />
-      <Cards/>
+
+      <SignIn/>
+      <Gallery/>
+
     </>
   )
 }
