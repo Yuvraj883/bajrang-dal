@@ -3,6 +3,7 @@ import Cards from '../Components/Card'
 import ImageGallery from '../Components/ImageGallery'
 import React, { useEffect, useState } from 'react';
 import Unauthorized from './Unauthorized';
+import Typewriter from '../Components/TypeWriter';
 
 const Gallery = () => {
   const [signedIn, setSignedIn] = useState(localStorage.getItem('SignedIn'));
@@ -15,6 +16,7 @@ const Gallery = () => {
         <>
         <Header />
         <div className='p-10 shadow-md'>
+          <Typewriter/>
 
           {/* <Cards /> */}
           <ImageGallery />
