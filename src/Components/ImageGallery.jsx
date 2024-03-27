@@ -1,24 +1,32 @@
-import * as React from 'react';
-import Box from '@mui/material/Box';
+import { useState } from 'react';
 import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';
 
 export default function ImageGallery() {
+  const [selectedItem, setSelectedItem] =useState(null);
+
+  const handleClick = (id) => {
+    setSelectedItem(selectedItem === id ? null : id);
+  };
+
   return (
-
-      <ImageList variant="masonry" cols={3} gap={8}>
-        {itemData.map((item) => (
-          <ImageListItem key={item.id}>
-            <img
-              srcSet={`${item.img}?w=248&fit=crop&auto=format&dpr=2 2x`}
-              src={`${item.img}?w=248&fit=crop&auto=format`}
-              alt={item.title}
-              loading="lazy"
-            />
-          </ImageListItem>
-        ))}
-      </ImageList>
-
+    <ImageList variant="masonry" cols={3} gap={8}>
+      {itemData.map((item) => (
+        <ImageListItem
+          key={item.id}
+          onClick={() => handleClick(item.id)}
+          className={selectedItem === item.id ? 'z-10  transform scale-150 transition-transform duration-300' : ''}
+        >
+          <img
+            srcSet={`${item.img}?w=248&fit=crop&auto=format&dpr=2 2x`}
+            src={`${item.img}?w=248&fit=crop&auto=format`}
+            alt={item.title}
+            loading="lazy"
+            className="rounded-md"
+          />
+        </ImageListItem>
+      ))}
+    </ImageList>
   );
 }
 
