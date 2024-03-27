@@ -1,19 +1,25 @@
 import Header from '../Components/Header'
 import Cards from '../Components/Card'
 import ImageGallery from '../Components/ImageGallery'
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Unauthorized from './Unauthorized';
 
 const Gallery = () => {
-  const [signedIn, setSignedIn] = useState(localStorage.getItem('signedIn'));
+  const [signedIn, setSignedIn] = useState(localStorage.getItem('SignedIn'));
+
+
 
   return (
     <>
       {signedIn && (
         <>
-          <Header />
-          <Cards />
+        <Header />
+        <div className='p-10 shadow-md'>
+
+          {/* <Cards /> */}
           <ImageGallery />
+        </div>
+
         </>
       )}
       {
