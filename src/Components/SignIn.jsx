@@ -1,5 +1,6 @@
 import { useNavigate } from 'react-router-dom';
 import React, { useState } from 'react';
+
 import {
   Avatar,
   Button,
@@ -17,7 +18,6 @@ import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 
 const SignIn = () => {
   const navigate = useNavigate();
-  // const [signedIn, setSignedIn] = useState(false);
   localStorage.setItem('signedIn', false);
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
