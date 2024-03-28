@@ -40,21 +40,21 @@ export default function ImageGallery() {
 }
 
 const itemData = [
-  {
-    id: 14,
-    img: '../../image14.jpeg',
-    title: 'meme',
-  },
+  // {
+  //   id: 14,
+  //   img: '../../image14.jpeg',
+  //   title: 'meme',
+  // },
   {
     id: 21,
     img: '../../image21.jpeg',
     title: 'Sink',
   },
-  // {
-  //   id: 1,
-  //   img: '../../image1.jpeg',
-  //   title: 'Sink',
-  // },
+  {
+    id: 1,
+    img: '../../image1.jpeg',
+    title: 'Sink',
+  },
   {
     id: 2,
     img: '../../image2.jpeg',
@@ -70,11 +70,11 @@ const itemData = [
     img: '../../image16.jpeg',
     title: 'Sink',
   },
-  //  {
-  //   id: 18,
-  //   img: '../../image18.mp4',
-  //   title: 'Sink',
-  // },
+   {
+    id: 18,
+    img: '../../image18.mp4',
+    title: 'Sink',
+  },
 
   {
     id: 3,
@@ -87,12 +87,12 @@ const itemData = [
     img: '../../image4.jpeg',
     title: 'Sink',
   },
-  // {
-  //   id:15,
-  //   img:'../../image15.jpeg',
-  //   title:'meme'
+  {
+    id:15,
+    img:'../../image15.jpeg',
+    title:'meme'
 
-  // },
+  },
 
   {
     id: 5,
@@ -214,11 +214,11 @@ const itemData = [
     img: '../../image21.jpeg',
     title: 'Sink',
   },
-  // {
-  //   id: 20,
-  //   img: '../../image20.jpeg',
-  //   title: 'Sink',
-  // },
+  {
+    id: 34,
+    img: '../../image20.jpeg',
+    title: 'Sink',
+  },
   // {
   //   id: 16,
   //   img: '../../image16.jpeg',
