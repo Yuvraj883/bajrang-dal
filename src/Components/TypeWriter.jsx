@@ -4,7 +4,7 @@ import { Typography, Box } from '@mui/material';
 const Typewriter = () => {
   const [displayText, setDisplayText] = useState('');
   const [index, setIndex] = useState(0);
-  const text = 'Jo ruthe bhi to, na jaa na kahi!! Mai tera tha kl, mai tera abhi!!!!'; // Text to be displayed with typing effect
+  const text = 'Jo ruthe bhi to, na jaa na kahi!! Mai tera tha kl, mai tera abhi💞!!'; // Text to be displayed with typing effect
 
   useEffect(() => {
     const interval = setInterval(() => {

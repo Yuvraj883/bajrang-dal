@@ -32,7 +32,7 @@ export default function ButtonAppBar() {
           <Typography variant="h6" component="div" sx={{ flexGrow: 1,
           fontWeight:'bold', fontFamily:'roboto', color:"#fbcfe8"
           }}>
-            GG's Gallery
+            Pyaari Kanno {'<3'}
           </Typography>
           <Button color="inherit" onClick={handleLogOut}>Log Out</Button>
         </Toolbar>
