@@ -36,7 +36,19 @@ export default function ImageGallery() {
             />
           )}
           {item.type === 'video' && (
-            <div style={{ width: '100%', height: '100%' }}>
+            <div
+            style={{
+              width: '100%',
+              height: '100%',
+              transform: selectedItem === item.id ? 'scale(1.5)' : 'scale(1)',
+              zIndex: selectedItem === item.id ? 10 : 'auto',
+
+              display: 'flex',
+              justifyContent: 'center',
+              alignItems: 'center',
+              backgroundColor: 'black', // fallback background color
+            }}
+            >
               <iframe
 
                 autoPlay
