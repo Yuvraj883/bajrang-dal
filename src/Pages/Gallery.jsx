@@ -16,7 +16,7 @@ const Gallery = () => {
         <>
         <Header />
         <div className='p-5 shadow-md'>
-          {/* <Typewriter/> */}
+          <Typewriter/>
 
           {/* <Cards /> */}
           <ImageGallery />
