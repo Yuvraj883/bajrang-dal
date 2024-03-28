@@ -16,14 +16,20 @@ export default function ImageGallery() {
           key={item.id}
           onClick={() => handleClick(item.id)}
           style={{ transform: selectedItem === item.id ? 'scale(1.5)' : 'scale(1)',
-          zIndex: selectedItem === item.id ? 10 : 'auto'}}
+          zIndex: selectedItem === item.id ? 10 : 'auto',
+          overflow:'hidden'}}
         >
           <img
             srcSet={`${item.img}?w=248&fit=crop&auto=format&dpr=2 2x`}
             src={`${item.img}?w=248&fit=crop&auto=format`}
             alt={item.title}
             loading="lazy"
-            className="rounded-md"
+            className="rounded-md "
+            style={{
+              width: '100%', // Ensures the image takes up the full width of its container
+              height: '100%', // Ensures the image takes up the full height of its container
+              objectFit: 'cover' // Scales the image while maintaining its aspect ratio and cropping as needed to fill its container
+            }}
           />
         </ImageListItem>
       ))}
