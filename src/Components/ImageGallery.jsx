@@ -3,7 +3,7 @@ import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';
 
 export default function ImageGallery() {
-  const [selectedItem, setSelectedItem] =useState(null);
+  const [selectedItem, setSelectedItem] = useState(null);
 
   const handleClick = (id) => {
     setSelectedItem(selectedItem === id ? null : id);
@@ -15,7 +15,8 @@ export default function ImageGallery() {
         <ImageListItem
           key={item.id}
           onClick={() => handleClick(item.id)}
-          className={selectedItem === item.id ? 'z-10  transform -scale-150 transition-transform duration-300' : ''}
+          style={{ transform: selectedItem === item.id ? 'scale(1.5)' : 'scale(1)',
+          zIndex: selectedItem === item.id ? 10 : 'auto'}}
         >
           <img
             srcSet={`${item.img}?w=248&fit=crop&auto=format&dpr=2 2x`}
