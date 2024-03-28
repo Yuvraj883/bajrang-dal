@@ -49,7 +49,7 @@ export default function ImageGallery() {
               backgroundColor: 'black', // fallback background color
             }}
             >
-              <iframe
+              <video
 
                 autoPlay
                 loop
