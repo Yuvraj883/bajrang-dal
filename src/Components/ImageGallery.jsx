@@ -42,7 +42,7 @@ export default function ImageGallery() {
               height: '100%',
               transform: selectedItem === item.id ? 'scale(1.5)' : 'scale(1)',
               zIndex: selectedItem === item.id ? 10 : 'auto',
-
+              borderRadius:'10%',
               display: 'flex',
               justifyContent: 'center',
               alignItems: 'center',
@@ -54,11 +54,12 @@ export default function ImageGallery() {
                 autoPlay
                 loop
                 muted
+
                 src={item.src}
                 title={item.title}
                 width="100%"
                 height="100%"
-                style={{ border: 'none' }} // Remove iframe border
+                style={{ border: 'none',}} // Remove iframe border
               />
             </div>
           )}

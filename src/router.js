@@ -3,6 +3,7 @@ import App from './App';
 import SignIn from './Components/SignIn';
 import ErrorPage from './Pages/ErrorPage';
 import Gallery from './Pages/Gallery';
+import Notes from './Pages/Notes';
 
 
 const router = createBrowserRouter([
@@ -23,6 +24,11 @@ const router = createBrowserRouter([
             {
                 path:'gallery',
                 element:<Gallery/>,
+            },
+            {
+              path:'notes',
+              element:<Notes/>
+
             }
         ]
 

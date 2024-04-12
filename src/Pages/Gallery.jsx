@@ -14,7 +14,7 @@ const Gallery = () => {
     <>
       {signedIn && (
         <>
-        <Header />
+        {/* <Header /> */}
         <div className='p-5 shadow-md'>
           <Typewriter/>
 
