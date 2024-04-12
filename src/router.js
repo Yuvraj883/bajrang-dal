@@ -4,6 +4,7 @@ import SignIn from './Components/SignIn';
 import ErrorPage from './Pages/ErrorPage';
 import Gallery from './Pages/Gallery';
 import Notes from './Pages/Notes';
+import SignUp from './Pages/SignUp';
 
 
 const router = createBrowserRouter([
@@ -28,6 +29,11 @@ const router = createBrowserRouter([
             {
               path:'notes',
               element:<Notes/>
+
+            },
+            {
+              path:'sign-up',
+              element:<SignUp/>
 
             }
         ]

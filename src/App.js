@@ -6,38 +6,47 @@ import { Outlet, useNavigate } from 'react-router-dom';
 import { useEffect,useState } from 'react';
 import {app} from './Firebase';
 import {get, getDatabase, ref,set} from 'firebase/database';
+import {getAuth, onAuthStateChanged} from 'firebase/auth'
+import SignUp from './Pages/SignUp';
 function App() {
-    const db = getDatabase(app);
-    const putData = ()=>{
-      set(ref(db,"users/yuvraj" ),{
-        id:8,
-        name:'Yuvraj Singh',
-        age:20
-      });
-    }
 
-    useEffect(()=>{
-      putData();
-    },[]);
-
-  const [signedIn, setSignedIn] = useState(localStorage.getItem('signedIn'));
+  const auth = getAuth(app);
+  const [user, setUser] = useState(null);
 
   const navigate = useNavigate();
   useEffect(()=>{
-   if(!signedIn){
-    navigate('sign-in');
-   }
+    onAuthStateChanged(auth, (user)=>{
+      if(user){
+        // alert("User Exists");
+        setUser(user);
+        // navigate('/gallery')
+        console.log(user);
+
+      }
+      else{
+        alert(user);
+        setUser(null);
+        navigate('/sign-in');
+        console.log("You are logged out");
+      }
+    })
 
   },[]);
+
+  if(user===null){
+    return(
+      <>
+      <SignIn/>
+      {/* <SignUp/> */}
+      </>
+    )
+  }
+
   return (
     <>
 
-      {/* <SignIn/>
-      <Gallery/> */}
-      {signedIn &&
-      <Header/>}
-
-      <Outlet/>
+     <Header/>
+     <Outlet/>
 
     </>
   )

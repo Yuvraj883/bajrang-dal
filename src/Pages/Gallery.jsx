@@ -6,13 +6,13 @@ import Unauthorized from './Unauthorized';
 import Typewriter from '../Components/TypeWriter';
 
 const Gallery = () => {
-  const [signedIn, setSignedIn] = useState(localStorage.getItem('SignedIn'));
+  // const [signedIn, setSignedIn] = useState(localStorage.getItem('SignedIn'));
 
 
 
   return (
     <>
-      {signedIn && (
+
         <>
         {/* <Header /> */}
         <div className='p-5 shadow-md'>
@@ -23,11 +23,11 @@ const Gallery = () => {
         </div>
 
         </>
-      )}
-      {
-        !signedIn &&
+
+      {/* {
+        !localStorage.getItem('SignedIn') &&
         <Unauthorized/>
-      }
+      } */}
     </>
   );
 }

@@ -45,7 +45,7 @@ const SignUp = () => {
           <LockOutlinedIcon />
         </Avatar>
         <Typography component='h1' variant='h5'>
-          Sign in
+          Sign Up
         </Typography>
         <form
           style={{ width: '100%', marginTop: '8px' }}

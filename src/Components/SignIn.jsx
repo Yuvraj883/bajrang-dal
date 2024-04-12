@@ -1,5 +1,7 @@
 import { useNavigate } from 'react-router-dom'
-import React, { useState } from 'react'
+import React, { useState } from 'react';
+import { getAuth,signInWithEmailAndPassword } from 'firebase/auth';
+import {app} from '../Firebase';
 
 import {
   Avatar,
@@ -17,23 +19,32 @@ import {
 import LockOutlinedIcon from '@mui/icons-material/LockOutlined'
 
 const SignIn = () => {
-  const navigate = useNavigate()
+  const navigate = useNavigate();
+  const auth = getAuth(app);
   localStorage.setItem('signedIn', false)
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const [error, setError] = useState('')
 
   const handleSignIn = (e) => {
-    e.preventDefault()
-    if (password === 'godYuvi883' && email === 'im.thegod883@gmail.com') {
-      // Redirect to the main page
-      // console.log('Signing in with:', email, password);
-      localStorage.setItem('SignedIn', true)
-      navigate('/gallery')
-    } else {
-      // Show error message
-      setError('Invalid credentials. Please try again.')
-    }
+    // e.preventDefault()
+    // if (password === 'godYuvi883' && email === 'im.thegod883@gmail.com') {
+    //   // Redirect to the main page
+    //   // console.log('Signing in with:', email, password);
+    //   localStorage.setItem('SignedIn', true)
+    //   navigate('/gallery')
+    // } else {
+    //   // Show error message
+    //   setError('Invalid credentials. Please try again.')
+    // }
+    e.preventDefault();
+    signInWithEmailAndPassword(auth, email, password)
+    .then((value)=>{
+      console.log(value);
+      navigate('/gallery');
+    })
+    .catch((err)=>alert(err));
+
   }
 
   return (
